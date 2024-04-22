@@ -1,3 +1,8 @@
+# cross compile as static arm64 binary
+./bootstrap.sh
+./configure --prefix=$ARMPREFIX --host=aarch64-linux-gnu --without-jpeg --with-udevdir=$ARMPREFIX/lib/udev LDFLAGS="--static -static" --disable-shared --enable-static
+make
+
 # v4l-utils
 
 Linux utilities and libraries to handle media devices (TV devices, capture
